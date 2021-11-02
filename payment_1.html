@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Placing order</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+       <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+      
+       <style>
+       
+        #body {
+            font-family: 'Nunito';
+            background-color:  #90b5e0;
+        }
+        #login-card{
+            width:420px;
+            border-radius: 25px;
+            margin:80px auto;
+            box-shadow: 0px 16px 32px rgba(177, 170, 170, 0.781);
+            transition: 0.3s;
+        }
+
+        #email{
+            border-radius:30px;
+            background-color: #ebf0fc;
+            border-color: #ebf0fc;
+            color: #9da3b0;
+            box-shadow: 0px 2px 4px rgba(192, 196, 202, 0.781);
+            transition: 0.3s;
+        }
+
+        #button{
+            border-radius:30px;
+            box-shadow: 0px 2px 4px rgba(0, 89, 255, 0.781);
+            transition: 0.3s;
+        }
+
+        #btn{
+            position: absolute; 
+            bottom: -35px; 
+            padding: 5px;
+            margin: 0px 55px;
+            align-items: center;
+            border-radius: 5px"
+        }
+        #container{
+            margin-top:20px;
+        }
+
+        .btn-circle.btn-sm { 
+            width: 40px; 
+            height: 40px; 
+            padding: 2px 0px; 
+            border-radius: 25px; 
+            font-size: 14px; 
+            text-align: center;
+            margin: 8px;
+        }
+        .custom-shape-divider-bottom-1635335353 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;    
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .custom-shape-divider-bottom-1635335353 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 500px;  
+        }
+
+        .custom-shape-divider-bottom-1635335353 .shape-fill {
+            fill: #FFFFFF;
+        }
+      </style>
+    
+  </head>
+  <body id="body" style="background-color: rgb(176, 206, 218);">
+    <div class="custom-shape-divider-bottom-1635335353">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
+        </svg>
+    </div>
+   
+      <div id="login-card" class="card">
+      <div class="card-body">
+       
+          <br>
+        <h2 class="text-center" ><b>Order Details..</b></h2>
+        <br>
+        <form action="javascript:placeorder()" method="post" >
+          <div class="form-group">
+              &nbsp; Email Id:
+            <input type="email" class="form-control" id="email" placeholder="Enter Email Id " required="" />
+          </div>
+          <div class="form-group">
+              &nbsp; Full Name: 
+            <input type="Name" class="form-control" id="email" placeholder="Enter Full Name" required="" />
+            <br>
+            &nbsp;
+            Address : 
+            <textarea class="form-control" id="email" name="Address" placeholder="Address"rows="2" required=""></textarea>
+            <br>
+            &nbsp;
+            Mobile No :     
+            <input type="number" class="form-control" id="email" placeholder="Enter Mobile No" name="Mobileno" required="" />
+            <br>
+            
+          </div>
+          <a href="#" style="color: white;"></a><button type="submit" id="button" class="btn btn-primary deep-purple btn-block ">Place Order</button></a>
+          &nbsp;<a href="smartphone.html" style="color: white;"><button type="submit" id="button" class="btn btn-primary deep-purple btn-block ">Cancel</button></a>
+          <br>
+          <center>
+            
+             <br><h6>NOTE: <br>Pay when you get the order <br> You can also pay using UPI and Netbanking</h6>
+          </center>
+          <br>
+        </form>
+      </div>
+      <div>
+        
+        <script>
+            
+            function placeorder() {
+            document.write('<center> <br><br><br><br><br><br><br><br><br>');  
+            document.write('<br><br><br><br><br><br><br><br><br>');  
+            document.write('Order Placed Successfully'+'<br>'+'Thank You For Conneting With Us... ');              
+            document.write('</center>'); 
+            pageRedirect();
+            }
+            function pageRedirect(){
+                var delay = 5000; // time in milliseconds
+                document.write('<center> <br>'+'Redirecting To Home Page in 5 Sec. <br> Pls Wait ... '+'</center>');
+                setTimeout(function(){
+                window.location = "https://vedantdhamle9.github.io/mobapp/index.html";
+            
+            },delay);
+ 
+}
+        </script>
+        
+  </body>
+</html>

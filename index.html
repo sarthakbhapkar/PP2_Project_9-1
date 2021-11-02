@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    
+        <title>SmartphoneHub</title>
+</head>
+
+<body>
+
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">SmartphoneHub</a>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x'></i>
+                </div>
+
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Us</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
+                    <li class="nav__item"><a href="product2.html" class="nav__link">Shop Now</a></li>
+                    <!--
+                        <li class="nav__item"><a href="#Latestpro" class="nav__link">New Product</a></li>
+                    -->
+                        <li class="nav__item"><a href="#Offers" class="nav__link">Offers</a></li>   
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main" id="back">
+        <div class="custom-shape-divider-bottom-1631602924">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                
+                <path
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <section class="home" id="home">
+            <div class="home__container bd-grid">
+                <div class="home__img">
+                    <iframe src="https://embed.lottiefiles.com/animation/55461"  alt="" data-speed="2" class="move" style="padding: 10px; height: 100%; width: 100%;"></iframe>
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title">Smartphones <br> Hub</h1><br>
+                    <p class="home__description">Let's The Shoppers Shop <br> On The Great Occasion Of Diwali.</p>
+                    <a href="product2.html" class="home__button">Shop Now...</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="Offers" id="Offers">
+            <br><br><br><br>
+            <h2 class="section-title" style="color: rgb(0, 0, 0);">Offers</h2>
+                <div class="container1">
+                    <div class="arrow l" onclick="prev()">
+                        <img src="assets/img/l.png" alt="l">
+                    </div>
+                <div class="slide slide-1">
+                <div class="caption">
+                    <h3>It’s Diwali, and it’s sale time</h3>
+                    <p>
+                        Celebrate safe Diwali and shop with us
+                        It’s your time to shop with us in this Diwali</p>
+                    </div>
+                </div>
+                <div class="slide slide-2">
+                    <div class="caption">
+                        <h3>50% Discount on all Smartphones</h3>
+                        <p> Hurry up! sales are not going to last long
+                            Spread happiness with others and shop with us
+                        </p>
+                    </div>
+                </div>
+                <div class="slide slide-3">
+                    <div class="caption">
+                        <h3>Buy Any Iphone</h3>
+                        <p>And Get The Airpods Free!!</p>
+                    </div>
+                </div>
+                <div class="arrow r" onclick="next()">
+                    <img src="assets/img/r.png" alt="r">
+                </div>
+            </div>
+
+    <script>
+        let slide = document.querySelectorAll('.slide');
+        var current = 0;
+
+        function cls(){
+            for(let i = 0; i < slide.length; i++){
+                  slide[i].style.display = 'none';
+            }
+        }
+
+        function next(){
+            cls();
+            if(current === slide.length-1) current = -1;
+            current++;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.8;
+
+            var x = 0.8;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.8;
+                }
+            }, 20);
+
+        }
+
+        function prev(){
+            cls();
+            if(current === 0) current = slide.length;
+            current--;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function start(){
+            cls();
+            slide[current].style.display = 'block';
+        }
+        start();
+    </script>  
+    </section>
+
+<!--New Product Section-->
+        <section class="Latest Product" id="Latestpro" style="background-color: white;">
+            <br><br><br><br>
+            <h2 class="section-title">New Product</h2>
+            <div class="product-center container">
+            <div class="product">
+                <div class="product-header">
+                  <img src="Images/products/12promax-removebg-preview.png" alt="">    
+                </div>
+                <div class="product-footer">
+                  <a href="smartphone.html"><h3>Iphone 12 Pro Max</h3></a>
+                  <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                  </div>
+                  <h4 class="price">Rs.118,900</h4>
+                </div>
+              </div>
+            <div class="product">
+                <div class="product-header">
+                  <img src="Images/products/8t-removebg-preview.png" alt="">
+                </div>
+                <div class="product-footer">
+                  <a href="smartphone.html"><h3>Oneplus 8T 5G</h3></a>
+                  <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                  </div>
+                  <h4 class="price">Rs.38,999</h4>
+                </div>
+              </div>
+            <div class="product">
+                <div class="product-header">
+                  <img src="Images/products/k20_pro-removebg-preview.png" alt="">
+                </div>
+                <div class="product-footer">
+                  <a href="smartphone.html"><h3>Redmi K20 pro</h3></a>
+                  <div class="rating">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bx-star"></i>
+                  </div>
+                  <h4 class="price">Rs.24,999</h4>
+                </div>
+              </div>
+              </div>
+              <br><br>
+        </section>
+
+<!--About Section-->
+        <section class="about section" id="about" >
+            <h2 class="section-title">About</h2>
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/SmartphonseHub.png" alt="" width="">
+                </div>
+                <div>
+                    <h2 class="about__subtitle">About </h2>
+                    <span class="about__profession">SmartphoneHub</span>
+                    <p class="about__text">
+                        It's Been 10 Year's To Us For Selling Good Quality Smartphones And Giving Best Services To All
+                        Customers.
+                        <br>
+                        Since Covid We Are Try To Give Best Service To Customers And We Always Ensure Your Safety At The
+                        Time Of Delivery.
+                    </p>
+                    <div class="about__social">
+                        <a href="#" class="about__social-icon"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="about__social-icon"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <center>
+                <video width="80%" height="80%" controls autoplay>
+                    <source src="assets/img/Introvideo (1).mp4" type="video/mp4">
+                    <source src="assets/img/Introvideo (1).ogg" type="video/ogg">
+                </video>
+            </center>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        </section>
+
+<!-- reviews section-->
+<section class="Review_Section" id="Reviews">
+    <br><br><br><br>
+    <h2 class="section-title">Reviews</h2>
+    <div class="testimonial-center container">
+      <div class="testimonial">
+        <span>&ldquo;</span>
+        <p>
+            Good product. Good quality. Good quality mobile. Great quality. Service excellent
+            Is Very good Quality
+            And best service
+        </p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="img-cover">
+          <img src="assets/img/profile1.jpg" alt="" />
+        </div>
+        <h4>Rohit</h4>
+      </div>
+      <div class="testimonial">
+        <span>&ldquo;</span>
+        <p>
+            This is awesome plateform for buying mobile phones.
+            so many types of phone are 
+            there & quality is to good must try this for shopping.
+        </p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <div class="img-cover">
+          <img src="assets/img/profile2.jpg" alt="" />
+        </div>
+        <h4>Virat</h4>
+      </div>
+      <div class="testimonial">
+        <span>&ldquo;</span>
+        <p>
+            This site has the best products those are value for money and 
+            product quality is best, Product service is also best, Also Try 
+            to give Fast Delivery.
+        </p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="img-cover">
+          <img src="assets/img/profile3.jpg" alt="" />
+        </div>
+        <h4>Mitali</h4>
+      </div>
+      <div class="testimonial">
+        <span>&ldquo;</span>
+        <p>
+            <br>
+            Excellent, It's only web site for shopping all 
+            categories mobiles.
+            <br><br>
+            <br>
+        </p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <div class="img-cover">
+          <img src="assets/img/profile4.jpg" alt="" />
+        </div>
+        <h4>Smriti</h4>
+      </div>
+    </div>
+    <br><br><br>
+  </section>
+
+  <!-- Contact form-->
+        <section class="w3l-simple-contact-form1" id="contact" >
+            <div class="contact-form section-gap" style="background-color: white;">
+                <div class="wrapper">
+                    <br><br>
+                    <h2 class="section-title" style="font-size: x-large;">Contact Us</h2><br>
+                    <div class="contact-form" style="max-width: 90%; margin: 0 auto; border: 5px solid rgb(214, 214, 214);border-radius: 40px;">
+                        <div class="form-mid" style="border-radius: 40px;">
+                            <form action="javascript:sendmail()" method="post">
+                                <div class="field" style="display: flex;flex-flow: row; padding: 1px;">
+                                    <input type="text" class="form-control" name="Name" id="Name" placeholder="Name" required="">
+                                    &nbsp;&nbsp;
+                                    <input type="text" class="form-control" name="Lastname" id="Lastname" placeholder="Last Name" required="">
+                                </div>
+                                <div class="field">
+                                    <input type="email" class="form-control" name="Sender" id="Sender" placeholder="Email" required="">
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="pno" class="form-control" id="pno" placeholder="Phone Number" required="required">
+                                </div>
+                                <textarea name="Message" class="form-control" id="Message" placeholder="Message" required=""></textarea>
+                                <button type="submit" class="btn btn-contact">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br>&nbsp;<br>&nbsp;
+            </div> 
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        
+        <script>
+            function sendmail() {
+                var name = $('#Name').val();
+                var slastname = $('#Lastname').val();
+                var email = $('#Sender').val();
+                var spno = $('#pno').val();
+                var message = $('#Message').val();
+                var Body = 'Name: ' + name + '<br>Last Name: ' + slastname + '<br>Email: ' + email + '<br>Phone No : ' + spno + '<br>Message: ' + message;
+
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "personalportfoliowebsites@gmail.com",
+                    Password: "vedantd12",
+                    To: "vedantdhamale11@gmail.com",
+                    From: "personalportfoliowebsites@gmail.com",
+                    Subject: "New message on contact from " + name,
+                    Body: Body
+                }).then(
+                    message => {
+                        if (message == 'OK') {
+                            alert('Your mail has been send. Thank you for connecting.');
+                        }
+                        else {
+                            console.error(message);
+                            alert('There is error at sending message. ');
+                        }
+                    }
+                );
+            }
+        </script>
+        </script>
+
+<!-- Team Section-->
+        <section id="team">
+            <h2 class="section-title" style="font-size: x-large;">Contact Us</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="assets/img/sarthak.jpg" alt="" class="img">
+                        <h4>Sarthak Bhapkar</h4>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;
+                    <div class="col">
+                        <img src="assets/img/profileimg1.jpg" alt="" class="img">
+                        <h4>Vedant Dhamale</h4>    
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;
+                    <div class="col">
+                        <img src="assets/img/vipul.jpg" alt="" class="img">
+                        <h4>Vipul Chavan</h4>                       
+                    </div>
+                    &nbsp; &nbsp;
+                    &nbsp; &nbsp;
+                    <div class="col">
+                        <img src="assets/img/athya.jpg" alt="" class="img">
+                        <h4>Atharva Kalbhor</h4>                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!--Footer Section-->
+        <footer class="footer section" style="background-color: black;">
+            <div class="footer__container bd-grid" >
+                <div class="footer__data"><br>
+                    <h2 class="footer__title">Smartphone <br>Hub</h2>
+                    <p class="footer__text" style="color: rgb(113, 71, 211);">This is a Official Website Of SmartphoneHub
+                    </p>
+                </div>
+                <div class="footer__data"><br>
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul style="color: rgb(179, 179, 179);">
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="smartphone.html" class="footer__link">Shop Now</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact Us</a></li>
+                        <li><a href="#team" class="footer__link">Team</a></li>
+                        <br>
+                    </ul>
+                </div>
+                <div class="footer__data"><br>
+                    <h2 class="footer__title">FOLLOW</h2>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
+                    <br> <br>
+                    <i style="color: rgb(82, 33, 138);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Image Credit: <br>Oneplus,Apple,Xiaomi </i>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        document.onkeydown = function (e) {
+            if (e.ctrlKey &&
+                (e.keyCode === 67 ||
+                    e.keyCode === 86 ||
+                    e.keyCode === 85 ||
+                    e.keyCode === 117)) {
+                return false;
+            } else {
+                return true;
+            }
+        };
+        $(document).keypress("u", function (e) {
+            if (e.ctrlKey) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        function disableselect(e) {
+            return false
+        }
+        function reEnable() {
+            return true
+        }
+        document.onselectstart = new Function("return false")
+        document.oncontextmenu = new Function("return false")    
+        if (window.sidebar) {
+            document.onmousedown = disableselect
+            document.onclick = reEnable
+        }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
